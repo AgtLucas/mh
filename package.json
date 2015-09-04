@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/AgtLucas/mh/issues"
   },
-  "homepage": "https://github.com/AgtLucas/mh#readme"
+  "homepage": "https://github.com/AgtLucas/mh#readme",
+  "dependencies": {
+    "hapi": "^9.1.0"
+  }
 }
