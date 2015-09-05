@@ -6,6 +6,14 @@ server.connection({
   port: Number(process.argv[2] || 8080)
 });
 
+server.route({
+  method: 'GET',
+  path: '/{name}',
+  handler: handler
+});
+
 function handler(request, reply) {
-  reply('Hello ' + request.params.name);
+  reply('Hello ' + encodeURIComponent(request.params.name));
 }
+
+server.start(function() {});
