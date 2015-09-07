@@ -14,10 +14,10 @@ server.connection({
 
 server.route({
   method: 'GET',
-  path: '/path/to/somewhere/{param}',
+  path: '/foo/bar/baz/{filename}',
   handler: {
     directory: {
-      path: path.join(__dirname, 'public/file.html')
+      path: path.join(__dirname, 'public')
     }
   }
 });
