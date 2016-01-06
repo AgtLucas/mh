@@ -1,14 +1,14 @@
-var Hapi = require('hapi');
-var H2o2 = require('h2o2');
+var Hapi = require('hapi')
+var H2o2 = require('h2o2')
 
-var server = new Hapi.Server();
+var server = new Hapi.Server()
 
 server.connection({
   host: 'localhost',
   port: Number(process.argv[2] || 8080)
-});
+})
 
-server.register(H2o2, function() {});
+server.register(H2o2, function() {})
 
 server.route({
   method: 'GET',
@@ -19,6 +19,6 @@ server.route({
       port: 65535
     }
   }
-});
+})
 
-server.start(function() {});
+server.start(function() {})
